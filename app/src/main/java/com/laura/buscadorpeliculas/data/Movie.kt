@@ -2,15 +2,15 @@ package com.laura.buscadorpeliculas.data
 
 import com.google.gson.annotations.SerializedName
 
-// Envoltorio seguro para la búsqueda
+
 data class MovieSearchResponse(
     @SerializedName("Search") val search: List<Movie>? = null,
     @SerializedName("totalResults") val totalResults: String? = null,
     @SerializedName("Response") val response: String,
-    @SerializedName("Error") val error: String? = null // Captura el mensaje si falla
+    @SerializedName("Error") val error: String? = null
 )
 
-// Modelo de Película totalmente seguro contra nulos
+
 data class Movie(
     @SerializedName("Title") val title: String?,
     @SerializedName("Year") val year: String?,

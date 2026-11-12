@@ -30,7 +30,7 @@ class DetailActivity : AppCompatActivity() {
     private fun cargarDetallePelicula(id: String) {
         lifecycleScope.launch(Dispatchers.IO) {
             try {
-                // Petición a OMDb para obtener los detalles completos por ID
+
                 val movie = MovieApi.getInstance().getMovieById(id)
 
                 withContext(Dispatchers.Main) {
